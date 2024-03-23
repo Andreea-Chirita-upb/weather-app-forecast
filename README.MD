@@ -8,8 +8,7 @@ Welcome to the Weather App repository! This project provides a user-friendly web
 - [Features](#features)
 - [Technologies Utilized](#technologies-utilized)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Demo
 
@@ -17,13 +16,13 @@ Here are some screenshots showcasing the Weather App in action:
 
 ### Current Weather Display
 
-![Current Weather](./Images/FrontPage.png)
+![Current Weather](./imagine-site-pornire-test.png)
 
 This screenshot demonstrates the current weather display of the Weather App, providing information such as temperature, weather description, wind speed, humidity, and pressure for the selected location.
 
 ### 5-Day Forecast
 
-![5-Day Forecast](./Images/FrontPage2.png)
+![5-Day Forecast](./Imagine-site-test.png)
 
 In this screenshot, you can see the 5-day weather forecast feature of the Weather App. It displays the forecast for each day, including the day of the week, weather icon, high and low temperatures, allowing users to plan their activities accordingly.
 
@@ -84,13 +83,6 @@ To use the Weather App, follow these simple steps:
 Feel free to explore different locations, check their current weather conditions, and plan your activities based on the forecast provided by the Weather App!
 
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any features, enhancements, or bug fixes.
-
-## License
-
-[Insert License information here if applicable]
 
 
 
