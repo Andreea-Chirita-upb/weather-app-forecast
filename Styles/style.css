@@ -1,0 +1,143 @@
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.weather-card {
+  background-color: #000000d1;
+  color: antiquewhite;
+  padding: 1.5em;
+  border-radius: 50px;
+  width: 450px;
+  max-width: 550px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.search-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input.search-bar {
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 50px;
+  background: #718b8663;
+  color: antiquewhite;
+  font-family: inherit;
+  font-size: 110%;
+  width: 83%;
+}
+
+.search-button {
+  margin: 0.5em;
+  border-radius: 80%;
+  border: none;
+  height: 50px;
+  width: 50px;
+  background: #718b8663;
+  color: antiquewhite;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.search-button:hover {
+  background: #718b8697;
+}
+
+h2.temp {
+  margin: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 18px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 25px;
+  position: relative;
+}
+.wind {
+  margin-top: 0.3em;
+}
+.humidity {
+  margin-top: 0.3em;
+}
+.pressure {
+  margin-top: 0.3em;
+}
+.temp_min {
+  margin-top: 0.3em;
+}
+.temp_max {
+  margin-top: 0.3em;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Waiting for a search ... ";
+  font-size: small;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  z-index: 10;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* autocomplete */
+
+.autocomplete-list {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+  position: absolute;
+  max-height: 210px;
+  width: 100%;
+  background-color: #f1e9e9fc;
+  overflow: scroll;
+  z-index: 20;
+}
+
+.autocomplete-list button {
+  border: unset;
+  background: unset;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5em;
+}
+
+.autocomplete-list li {
+  border: 1px solid #b4adad;
+  border-top: unset;
+}
+.autocomplete-list li:hover {
+  background: #999595;
+}
+.autocomplete-wrapper {
+  display: inline-block;
+  position: relative;
+}

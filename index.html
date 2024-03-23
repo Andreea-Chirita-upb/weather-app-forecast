@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <script src="./Scripts/CClock.js" defer></script>
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="stylesheet" href="./Styles/clock.css" />
+    <script src="./Scripts/forecast.js" defer></script>
+    <script src="./Scripts/script.js" defer></script>
+    <script src="./Scripts/clock.js" defer></script>
+    <script src="./Scripts/autocomplete.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Styles/Loading.scss" />
+    <link rel="stylesheet" href="./Styles/text.css" />
+    <link rel="stylesheet" href="./Styles/forecast.css" />
+    <script src="./Scripts/text.js" defer></script>
+    <title>Weather App</title>
+  </head>
+
+  <body background="./Images/Bucharest.jpg">
+    <!-- title -->
+    <div id="container">
+      <span id="text1"></span>
+      <span id="text2"></span>
+    </div>
+
+    <svg id="filters">
+      <defs>
+        <filter id="threshold">
+          <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 255 -140"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- clock -->
+    <div class="cointainer-Clock">
+      <div class="clockClass"></div>
+    </div>
+
+    <div class="div-clock">
+      <div id="clock">
+        <h3 id="date-time"></h3>
+      </div>
+    </div>
+
+    <!-- weather-card -->
+    <div class="weather-card">
+      <div class="search-weather">
+
+        <div class="autocomplete-wrapper" id="autocomplete-wrapper">
+          <input
+            id="input-id"
+            type="text"
+            class="search-bar"
+            placeholder="Type the country/city "
+          />
+        </div>
+        <button class="search-button" id="btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="weather loading">
+        <div id="root"></div>
+        <h3 class="city">Weather in Bucharest</h3>
+        <h2 class="temp">20°C</h2>
+        <div class="flex">
+          <img
+            src="https://openweathermap.org/img/wn/04n.png"
+            alt=""
+            class="icon"
+          />
+          <div class="description">Sunny</div>
+        </div>
+
+        <div class="wind">Wind speed: 5.4 km/h</div>
+        <div class="humidity">Humidity: 10%</div>
+        <div class="pressure">Pressure: 1021</div>
+        <div class="temp_min">Temp_min: 13</div>
+        <div class="temp_max">Temp_max: 14</div>
+      </div>
+    </div>
+
+    <!-- forecast -->
+
+    <div class="future-forecast" id="FF">
+      <h2 class="forecast-name">5 Days Forecast</h2>
+      <br />
+      <div class="weather-forecast" id="weather-forecast">
+        <div class="weather-forecast-item">
+          <div class="day" id="day0"></div>
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w-icon"
+            id="weather_img_icon0"
+          />
+          <div class="Temp" id="low0">
+            <div class="waviy">
+              <span style="--i: 1">L</span>
+              <span style="--i: 2">o</span>
+              <span style="--i: 3">a</span>
+              <span style="--i: 4">d</span>
+              <span style="--i: 5">i</span>
+              <span style="--i: 6">n</span>
+              <span style="--i: 7">g</span>
+              <span style="--i: 8">.</span>
+            </div>
+          </div>
+          <div class="Temp" id="high0"><div id="html-spinner"></div></div>
+        </div>
+        <div class="weather-forecast-item">
+          <div class="day" id="day1"></div>
+          <img
+            src="http://openweathermap.org/img/wn/11n@2x.png"
+            alt="weather icon"
+            class="w-icon"
+            id="weather_img_icon1"
+          />
+          <div class="Temp" id="low1">
+            <div class="waviy">
+              <span style="--i: 1">L</span>
+              <span style="--i: 2">o</span>
+              <span style="--i: 3">a</span>
+              <span style="--i: 4">d</span>
+              <span style="--i: 5">i</span>
+              <span style="--i: 6">n</span>
+              <span style="--i: 7">g</span>
+              <span style="--i: 8">.</span>
+            </div>
+          </div>
+          <div class="Temp" id="high1"><div id="html-spinner"></div></div>
+        </div>
+        <div class="weather-forecast-item">
+          <div class="day" id="day2"></div>
+          <img
+            src="http://openweathermap.org/img/wn/09n@2x.png"
+            alt="weather icon"
+            class="w-icon"
+            id="weather_img_icon2"
+          />
+          <div class="Temp" id="low2">
+            <div class="waviy">
+              <span style="--i: 1">L</span>
+              <span style="--i: 2">o</span>
+              <span style="--i: 3">a</span>
+              <span style="--i: 4">d</span>
+              <span style="--i: 5">i</span>
+              <span style="--i: 6">n</span>
+              <span style="--i: 7">g</span>
+              <span style="--i: 8">.</span>
+            </div>
+          </div>
+          <div class="Temp" id="high2"><div id="html-spinner"></div></div>
+        </div>
+        <div class="weather-forecast-item">
+          <div class="day" id="day3"></div>
+          <img
+            src="http://openweathermap.org/img/wn/13n@2x.png"
+            alt="weather icon"
+            class="w-icon"
+            id="weather_img_icon3"
+          />
+          <div class="Temp" id="low3">
+            <div class="waviy">
+              <span style="--i: 1">L</span>
+              <span style="--i: 2">o</span>
+              <span style="--i: 3">a</span>
+              <span style="--i: 4">d</span>
+              <span style="--i: 5">i</span>
+              <span style="--i: 6">n</span>
+              <span style="--i: 7">g</span>
+              <span style="--i: 8">.</span>
+            </div>
+          </div>
+          <div class="Temp" id="high3"><div id="html-spinner"></div></div>
+        </div>
+        <div class="weather-forecast-item">
+          <div class="day" id="day4"></div>
+          <img
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+            alt="weather icon"
+            class="w-icon"
+            id="weather_img_icon4"
+          />
+          <div class="Temp" id="low4">
+            <div class="waviy">
+              <span style="--i: 1">L</span>
+              <span style="--i: 2">o</span>
+              <span style="--i: 3">a</span>
+              <span style="--i: 4">d</span>
+              <span style="--i: 5">i</span>
+              <span style="--i: 6">n</span>
+              <span style="--i: 7">g</span>
+              <span style="--i: 8">.</span>
+            </div>
+          </div>
+          <div class="Temp" id="high4"><div id="html-spinner"></div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

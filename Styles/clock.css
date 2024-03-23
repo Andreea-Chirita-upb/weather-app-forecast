@@ -1,0 +1,22 @@
+/* clock */
+.div-clock {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c2c2cc9;
+  height: fit-content;
+  color: white;
+  padding-right: 0.9rem;
+  padding-left: 0.9rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+
+#clock {
+  max-width: 500px;
+}
