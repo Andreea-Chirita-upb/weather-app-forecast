@@ -35,7 +35,7 @@ function getWeatherData(zipCode) {
   let url =
     "https://api.openweathermap.org/data/2.5/forecast/daily?q=" +
     zipCode +
-    "&cnt=10&APPID=eec48f1630281ec926acbcbb20931f70";
+    "YOUR_API_KEY";
 
   $.ajax({
     url: url,
